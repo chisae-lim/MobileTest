@@ -28,6 +28,10 @@ end
 target 'MobileTest' do
   config = use_native_modules!
 
+  #modified
+  use_frameworks! :linkage => :static
+  $RNFirebaseAsStaticFramework = true
+  
   use_react_native!(
     :path => config[:reactNativePath],
     # Enables Flipper.
